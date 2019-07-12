@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="#da532c" name="theme-color">
+    <title>Contacts | Fortune towers</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/home.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/common.min.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://use.fontawesome.com/c2f7320238.js" type="text/javascript"></script>
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
+
+
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-hide" href="{% url 'details:profile' %}"><i class="fa fa-user fa-lg"></i></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'details:home' %}">Home</a></li>
+                <li><a href="{% url 'details:contacts' %}">Contacts</a></li>
+                <li><a href="{% url 'details:events' %}">Events</a></li>
+                <li><a href="{% url 'details:gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'details:association' %}">Association</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-show">
+                <li><a class="navbar-brand" href="{% url 'details:profile' %}"><i class="fa fa-user fa-lg"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="container mt-4">
+    <input class="form-control" id="myInput" type="text" placeholder="Search..">
+    <br>
+    <h3>A-BLOCK</h3>
+    <table class="table table-bordered" style="text-align: center">
+        <thead>
+        <tr>
+            <th style="text-align: center">Flat-no</th>
+            <th style="text-align: center">Name</th>
+            <th style="text-align: center">Contact number</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+        <tr>
+            <td>A-101</td>
+            <td>D. Hemababu Chowdary</td>
+            <td>9100868182</td>
+        </tr>
+        <tr>
+            <td>A-102</td>
+            <td>B. UmaMaheswara Rao</td>
+            <td>9849157072/
+                6303449963
+            </td>
+        </tr>
+        <tr>
+            <td>A-103</td>
+            <td>Y. Ajaysekhar</td>
+            <td>9502517384</td>
+        </tr>
+        <tr>
+            <td>A-104</td>
+            <td>D.Sreerama Murty</td>
+            <td>9440911608</td>
+        </tr>
+        <tr>
+            <td>A-105</td>
+            <td>Srinivas M</td>
+            <td>9848193568</td>
+        </tr>
+        <tr>
+            <td>A-106</td>
+            <td>Vmv Prasada Rao</td>
+            <td>9479249392</td>
+        </tr>
+        <tr>
+            <td>A-201</td>
+            <td>Svs Lakshmi/
+                Viswanadham/
+                S Meher Jagan Madhav</td>
+            <td>9912637625/
+                +12017803598</td>
+        </tr>
+        <tr>
+            <td>A-202</td>
+            <td>N.Murali Krishna</td>
+            <td>9949558503/
+                +1-508-2599-117</td>
+        </tr>
+        <tr>
+            <td>A-203</td>
+            <td>R Sreenivasa Rao</td>
+            <td>9440814199</td>
+        </tr>
+        <tr>
+            <td>A-204</td>
+            <td>Venu Gopal Reddy</td>
+            <td>9849910604</td>
+        </tr>
+        <tr>
+            <td>A-205</td>
+            <td>SRVSSN Jagapathi Raju</td>
+            <td>8121994245</td>
+        </tr>
+        <tr>
+            <td>A-206</td>
+            <td>DVS Murali Yadhav</td>
+            <td>9866624446</td>
+        </tr>
+        <tr>
+            <td>A-301</td>
+            <td>M Srinivas</td>
+            <td>9903076673</td>
+        </tr>
+        <tr>
+            <td>A-302</td>
+            <td>Radha M</td>
+            <td>8897354823</td>
+        </tr>
+        <tr>
+            <td>A-303</td>
+            <td>Vijay Verma</td>
+            <td>9849261230</td>
+        </tr>
+        <tr>
+            <td>A-304</td>
+            <td>R Nagarjuna Gupta</td>
+            <td>9490026831</td>
+        </tr>
+        <tr>
+            <td>A-305</td>
+            <td>T Ramamohan</td>
+            <td>9167256711</td>
+        </tr>
+        <tr>
+            <td>A-306</td>
+            <td>N Sivaprasad</td>
+            <td>9177726182</td>
+        </tr>
+        <tr>
+            <td>A-401</td>
+            <td>A V V S S N Prasad Rao</td>
+            <td>9951989899/
+                +96565089616
+            </td>
+        </tr>
+        <tr>
+            <td>A-402</td>
+            <td>KVV Satyanarayana</td>
+            <td>8897354823</td>
+        </tr>
+        <tr>
+            <td>A-403</td>
+            <td>Mohan Kumar</td>
+            <td>9885571368</td>
+        </tr>
+        <tr>
+            <td>A-404</td>
+            <td>T Siva Prasad</td>
+            <td>9440909138</td>
+        </tr>
+        <tr>
+            <td>A-405</td>
+            <td>Venkat Reddy</td>
+            <td>9848192031</td>
+        </tr>
+        <tr>
+            <td>A-406</td>
+            <td>M Sumanth Reddy</td>
+            <td>9848192031</td>
+        </tr>
+        <tr>
+            <td>A-501</td>
+            <td>K Rama Gopala Krishna Rao</td>
+            <td>9963522678</td>
+        </tr>
+        <tr>
+            <td>A-502</td>
+            <td>Maloy Chanda</td>
+            <td>+447757276147</td>
+        </tr>
+        <tr>
+            <td>A-503</td>
+            <td>V Siva Prasad Menon</td>
+            <td>9849194182</td>
+        </tr>
+        <tr>
+            <td>A-504</td>
+            <td>Ch Gopal</td>
+            <td>9052440032</td>
+        </tr>
+        <tr>
+            <td>A-505</td>
+            <td>Velappan Shiva Prasad</td>
+            <td>001-703 8642339/
+                001-703 8395330/
+                gpa holder 9248023044</td>
+        </tr>
+        <tr>
+            <td>A-506</td>
+            <td>SVVS Raju</td>
+            <td>7659036336</td>
+        </tr>
+        <tr>
+            <td>A-601</td>
+            <td>MVS Murthy</td>
+            <td>7382297944</td>
+        </tr>
+        <tr>
+            <td>A-602</td>
+            <td>Mohd.Faizulla Khan</td>
+            <td>9866094949</td>
+        </tr>
+        <tr>
+            <td>A-603</td>
+            <td>Mohd.Abdul Riaz Khan</td>
+            <td>9849894949</td>
+        </tr>
+        <tr>
+            <td>A-604</td>
+            <td>Tata Sharma/Tata Raji</td>
+            <td>97017 57773</td>
+        </tr>
+        <tr>
+            <td>A-605</td>
+            <td>M Ravi Joseph</td>
+            <td>9959333171</td>
+        </tr>
+        <tr>
+            <td>A-606</td>
+            <td>Umashankar N</td>
+            <td>94255 65570</td>
+        </tr>
+        <tr>
+            <td>A-701</td>
+            <td>G Balakrishna</td>
+            <td>9848478127</td>
+        </tr>
+        <tr>
+            <td>A-702</td>
+            <td>Atindra Nath Bhattacharjee</td>
+            <td>9819720435/
+                9848199461
+            </td>
+        </tr>
+        <tr>
+            <td>A-703</td>
+            <td>Gandhi Babu - Second Sale</td>
+            <td>8019318308</td>
+        </tr>
+        <tr>
+            <td>A-704</td>
+            <td>Sunil/Kamala Kumari B K</td>
+            <td>9177992047</td>
+        </tr>
+        <tr>
+            <td>A-705</td>
+            <td>D Parvathi / Pulla Reddy</td>
+            <td>9848192031</td>
+        </tr>
+        <tr>
+            <td>A-706</td>
+            <td>Mrs.K Sujatha Sanjeevan</td>
+            <td>9848522140</td>
+        </tr>
+        <tr>
+            <td>A-801</td>
+            <td>Sai Subba Raju - Second Sale</td>
+            <td>9849635262</td>
+        </tr>
+        <tr>
+            <td>A-802</td>
+            <td>Voolla Srinivasa Rao</td>
+            <td>9493231994</td>
+        </tr>
+        <tr>
+            <td>A-803</td>
+            <td>K.Ramakrishna / K.Ramatulasi</td>
+            <td>9030937965/
+                9440180425</td>
+        </tr>
+        <tr>
+            <td>A-804</td>
+            <td>AVN GOVINDA RAO</td>
+            <td>7893745689</td>
+        </tr>
+        <tr>
+            <td>A-805</td>
+            <td>Tadi Jaswanth</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>A-806</td>
+            <td>GNV AJAY BHASKAR</td>
+            <td>9866383699</td>
+        </tr>
+        <tr>
+            <td>A-901</td>
+            <td>Ramtech Industries - Narayana</td>
+            <td>8464912345</td>
+        </tr>
+        <tr>
+            <td>A-902</td>
+            <td>K.Satish (K.Parvatisam)</td>
+            <td>9441967841</td>
+        </tr>
+        <tr>
+            <td>A-903</td>
+            <td>Raja A</td>
+            <td>+12146765101</td>
+        </tr>
+        <tr>
+            <td>A-904</td>
+            <td>G VENKATA RAMANA</td>
+            <td>9866456840</td>
+        </tr>
+        <tr>
+            <td>A-905</td>
+            <td>HAMEED KHAN</td>
+            <td>9849694949</td>
+        </tr>
+        <tr>
+            <td>A-906</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <br>
+    <h3>B-BLOCK</h3>
+    <table class="table table-bordered" style="text-align: center">
+        <thead>
+        <tr>
+            <th style="text-align: center">Flat-no</th>
+            <th style="text-align: center">Name</th>
+            <th style="text-align: center">Contact number</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+        <tr>
+            <td>B-101</td>
+            <td>DBV JAGANNADHAM</td>
+            <td>9440329683</td>
+        </tr>
+        <tr>
+            <td>B-102</td>
+            <td>D NALINI KUMAR C/O M PRASADARAO</td>
+            <td>9440086255/
+                +14088383527</td>
+        </tr>
+        <tr>
+            <td>B-103</td>
+            <td>RAVI DHAWALESWARAPU</td>
+            <td>9100111435</td>
+        </tr>
+        <tr>
+            <td>B-104</td>
+            <td>V.SRINIVASA RAO</td>
+            <td>9030572119/
+                9866108601</td>
+        </tr>
+        <tr>
+            <td>B-105</td>
+            <td>P SRIVANI/
+                JAGAN</td>
+            <td>9494448494</td>
+        </tr>
+        <tr>
+            <td>B-106</td>
+            <td>P SRIVANI /
+                JAGAN</td>
+            <td>9958791692</td>
+        </tr>
+        <tr>
+            <td>B-201</td>
+            <td>S.RAVI KUMAR</td>
+            <td>7702836259</td>
+        </tr>
+        <tr>
+            <td>B-202</td>
+            <td> CH VASUDEV</td>
+            <td>9703708222</td>
+        </tr>
+        <tr>
+            <td>B-203</td>
+            <td>RAJ SEKHAR P</td>
+            <td>9985599447</td>
+        </tr>
+        <tr>
+            <td>B-204</td>
+            <td>SANJEEV BEHERA</td>
+            <td>+6590255766/
+                8374576552</td>
+        </tr>
+        <tr>
+            <td>B-205</td>
+            <td>TUHIN KUMAR</td>
+            <td>8978864162</td>
+        </tr>
+        <tr>
+            <td>B-206</td>
+            <td>KRISHNA KISHORE DEVARAKONDA</td>
+            <td>+17636074449</td>
+        </tr>
+        <tr>
+            <td>B-301</td>
+            <td>VARAPRASAD</td>
+            <td>9848165432</td>
+        </tr>
+        <tr>
+            <td>B-302</td>
+            <td>Dr. VIJAY ANAND</td>
+            <td>9312274564/
+                931382838351</td>
+        </tr>
+        <tr>
+            <td>B-303</td>
+            <td>SATHISH K ATTILI</td>
+            <td>9676840450</td>
+        </tr>
+        <tr>
+            <td>B-304</td>
+            <td>P. Vandana Reddy (Owner)/
+                P. Srinivas (Rep)</td>
+            <td>7842426666</td>
+        </tr>
+        <tr>
+            <td>B-305</td>
+            <td>Y.G.S. Prasad</td>
+            <td>9040096165</td>
+        </tr>
+        <tr>
+            <td>B-306</td>
+            <td>DV RAMANA</td>
+            <td>9441238088</td>
+        </tr>
+        <tr>
+            <td>B-401</td>
+            <td>G LAKSHMI PATI RAJU</td>
+            <td>9885166557</td>
+        </tr>
+        <tr>
+            <td>B-402</td>
+            <td>Cdr. A. GOPALA KRISHNA
+                G. NAGALAKSHMI</td>
+            <td>9393102773</td>
+        </tr>
+        <tr>
+            <td>B-403</td>
+            <td>Satheesh & Neelima - Second Sale</td>
+            <td>+12245958552</td>
+        </tr>
+        <tr>
+            <td>B-404</td>
+            <td>K Veeriah Chowdary</td>
+            <td>9885332182</td>
+        </tr>
+        <tr>
+            <td>B-405</td>
+            <td>VALLURI NAGESHWARA RAO/
+                ANANTHA LAKSHMI</td>
+            <td>9248005505</td>
+        </tr>
+        <tr>
+            <td>B-406</td>
+            <td>GARUDA V BHARAT KUMAR</td>
+            <td>9848553261</td>
+        </tr>
+        <tr>
+            <td>B-501</td>
+            <td>T. Kalika Prasad /
+                T. Shailaja</td>
+            <td>9989699936</td>
+        </tr>
+        <tr>
+            <td>B-502</td>
+            <td>VBP SARMA</td>
+            <td>8500642305</td>
+        </tr>
+        <tr>
+            <td>B-503</td>
+            <td>MANSOOR HAQUE</td>
+            <td>8826941230/011-25673237</td>
+        </tr>
+        <tr>
+            <td>B-504</td>
+            <td>ANANTH NAIDU J</td>
+            <td>9866121826</td>
+        </tr>
+        <tr>
+            <td>B-505</td>
+            <td>B MANMADHA RAO</td>
+            <td>9989930977</td>
+        </tr>
+        <tr>
+            <td>B-506</td>
+            <td>KVSS RAJESHWAR RAO</td>
+            <td>9849996569</td>
+        </tr>
+        <tr>
+            <td>B-601</td>
+            <td>KV SUBBARAO (Owner)/
+                K.KRISHNAMURTHY GARU (Rep)</td>
+            <td>9912855611/
+                9848618189</td>
+        </tr>
+        <tr>
+            <td>B-602</td>
+            <td>KV SUBBARAO (Owner)/
+                K.KRISHNAMURTHY GARU (Rep)</td>
+            <td>9912855611/
+                9848618189</td>
+        </tr>
+        <tr>
+            <td>B-603</td>
+            <td>SEKHARAN</td>
+            <td>9740840978</td>
+        </tr>
+        <tr>
+            <td>B-604</td>
+            <td>B.A.HANUMANTHA RAO</td>
+            <td>8939885315</td>
+        </tr>
+        <tr>
+            <td>B-605</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>B-606</td>
+            <td>JAWWAD HUSSAIN</td>
+            <td>8374922555</td>
+        </tr>
+        <tr>
+            <td>B-701</td>
+            <td>D. Srinivasa Rao</td>
+            <td>9652777877</td>
+        </tr>
+        <tr>
+            <td>B-702</td>
+            <td>RAMBABU</td>
+            <td>9000666855</td>
+        </tr>
+        <tr>
+            <td>B-703</td>
+            <td>ASIF ALI</td>
+            <td>+97433917499/
+                +97470016605</td>
+        </tr>
+        <tr>
+            <td>B-704</td>
+            <td>A RATNAKARA REDDY</td>
+            <td>9032259226/
+                8008040950</td>
+        </tr>
+        <tr>
+            <td>B-705</td>
+            <td>N LAXMAIAH (Rep) /
+                N. SRINIVASA CHAKRAVARTHY (Owner)</td>
+            <td>9494009820</td>
+        </tr>
+        <tr>
+            <td>B-706</td>
+            <td>CHERUKUPALLI VENKAT/
+                RK Chalam</td>
+            <td>+18058571372</td>
+        </tr>
+        <tr>
+            <td>B-801</td>
+            <td>M. VENKATA NANDA KISHORE</td>
+            <td>+13619030365</td>
+        </tr>
+        <tr>
+            <td>B-802</td>
+            <td>SASIKIRAN</td>
+            <td>+1 551-268-8261</td>
+        </tr>
+        <tr>
+            <td>B-803</td>
+            <td>RAHUL KUSALKAR</td>
+            <td>7893222256</td>
+        </tr>
+        <tr>
+            <td>B-804</td>
+            <td>SRINIVASA RAO PEELA</td>
+            <td>9437025336/
+                9676105783</td>
+        </tr>
+        <tr>
+            <td>B-805</td>
+            <td>PP NAIDU</td>
+            <td>9000876767</td>
+        </tr>
+        <tr>
+            <td>B-806</td>
+            <td>A. REVATHI DEVI/
+                Dr. BHUSHAN RAO</td>
+            <td>9849114628</td>
+        </tr>
+        <tr>
+            <td>B-901</td>
+            <td>PAVAN</td>
+            <td>+12039796677</td>
+        </tr>
+        <tr>
+            <td>B-902</td>
+            <td>A.MADHUSUDHAN
+                A.SIREESHA (Joint Owners)</td>
+            <td>+15612362529</td>
+        </tr>
+        <tr>
+            <td>B-903</td>
+            <td>RAKESH SINHA (Owner)
+                SRI HARI RAJU (Rep)</td>
+            <td>9000521577,
+                9502030305</td>
+        </tr>
+        <tr>
+            <td>B-904</td>
+            <td>Sandeep Kattamuri</td>
+            <td>9908011585/
+                9866552234</td>
+        </tr>
+        <tr>
+            <td>B-905</td>
+            <td>P. SATHISH</td>
+            <td>9393102990</td>
+        </tr>
+        <tr>
+            <td>B-906</td>
+            <td>SATHISH DASARI</td>
+            <td>9004088881</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <br>
+    <h3>C-BLOCK</h3>
+    <table class="table table-bordered" style="text-align: center">
+        <thead>
+        <tr>
+            <th style="text-align: center">Flat-no</th>
+            <th style="text-align: center">Name</th>
+            <th style="text-align: center">Contact number</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+        <tr>
+            <td>C-101</td>
+            <td>P B C RAO</td>
+            <td>9848522169</td>
+        </tr>
+        <tr>
+            <td>C-102</td>
+            <td>Mallipeddi Prasada Rao</td>
+            <td>9440086255</td>
+        </tr>
+        <tr>
+            <td>C-103</td>
+            <td>MT RAJU</td>
+            <td>9908216706</td>
+        </tr>
+        <tr>
+            <td>C-104</td>
+            <td>RATNA KUMAR PATNAIK</td>
+            <td>9441247090</td>
+        </tr>
+        <tr>
+            <td>C-105</td>
+            <td>SRINIVAS</td>
+            <td>9948092662</td>
+        </tr>
+        <tr>
+            <td>C-106</td>
+            <td>Rama Murthy</td>
+            <td>9652845017</td>
+        </tr>
+        <tr>
+            <td>C-201</td>
+            <td>G. Sai Koteswara Rao</td>
+            <td>9393023147</td>
+        </tr>
+        <tr>
+            <td>C-202</td>
+            <td>YUGANDHAR P</td>
+            <td>9177337773</td>
+        </tr>
+        <tr>
+            <td>C-203</td>
+            <td>Bandaru Hari Babu - Second Sale</td>
+            <td>79097 00110</td>
+        </tr>
+        <tr>
+            <td>C-204</td>
+            <td>BILLINGI RANGARAO</td>
+            <td>9759276096</td>
+        </tr>
+        <tr>
+            <td>C-205</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>C-206</td>
+            <td>S.SATYANARAYANA</td>
+            <td>91009 46956</td>
+        </tr>
+        <tr>
+            <td>C-301</td>
+            <td>C NARASIMHA MURTY</td>
+            <td>9849556474</td>
+        </tr>
+        <tr>
+            <td>C-302</td>
+            <td>PS RAJA SEKHAR</td>
+            <td>8500675636</td>
+        </tr>
+        <tr>
+            <td>C-303</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>C-304</td>
+            <td>RAVI KUMAR</td>
+            <td>96240 27070</td>
+        </tr>
+        <tr>
+            <td>C-305</td>
+            <td>K SATYANARAYANA</td>
+            <td>9490000358</td>
+        </tr>
+        <tr>
+            <td>C-306</td>
+            <td>Dr. Jaswanth/
+                T.N.Rao</td>
+            <td>9246665857</td>
+        </tr>
+        <tr>
+            <td>C-401</td>
+            <td>B.Vijaya Lakshmi/
+                B.S.V.C.M.Datt</td>
+            <td>9553683963</td>
+        </tr>
+        <tr>
+            <td>C-402</td>
+            <td>CHUKKA GEETA</td>
+            <td>9177337773</td>
+        </tr>
+        <tr>
+            <td>C-403</td>
+            <td>CSV SURYANARAYANA</td>
+            <td>9441059690</td>
+        </tr>
+        <tr>
+            <td>C-404</td>
+            <td>T V Madhusudhan Murthy</td>
+            <td>9848194012</td>
+        </tr>
+        <tr>
+            <td>C-405</td>
+            <td>B.Suneel Kumar </td>
+            <td>+14084161984</td>
+        </tr>
+        <tr>
+            <td>C-406</td>
+            <td>KVV SATYANARAYANA/
+                JAYASREE</td>
+            <td>8333038099</td>
+        </tr>
+        <tr>
+            <td>C-501</td>
+            <td>B VENKATA SUBBARAO</td>
+            <td>8008655140</td>
+        </tr>
+        <tr>
+            <td>C-502</td>
+            <td>RANJAN KUMAR SAHU</td>
+            <td>+24106005101</td>
+        </tr>
+        <tr>
+            <td>C-503</td>
+            <td>NIRANJAN PATRO</td>
+            <td>9885108061</td>
+        </tr>
+        <tr>
+            <td>C-504</td>
+            <td>Narendra Chowdary</td>
+            <td>8897055840</td>
+        </tr>
+        <tr>
+            <td>C-505</td>
+            <td>TENTU JAYAPRAKASH</td>
+            <td>8239567809</td>
+        </tr>
+        <tr>
+            <td>C-506</td>
+            <td>Sarat Babu/
+                Tarun</td>
+            <td>9959672343</td>
+        </tr>
+        <tr>
+            <td>C-601</td>
+            <td>P SREEDHAR</td>
+            <td>9177337773</td>
+        </tr>
+        <tr>
+            <td>C-602</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>C-603</td>
+            <td>Vamsi Marupudi</td>
+            <td>447886075562</td>
+        </tr>
+        <tr>
+            <td>C-604</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>C-605</td>
+            <td>KAMAL VOMMI</td>
+            <td>9703005393</td>
+        </tr>
+        <tr>
+            <td>C-606</td>
+            <td>MANIKANTA P (SAIBABA)</td>
+            <td>9949924449</td>
+        </tr>
+        <tr>
+            <td>C-701</td>
+            <td>Athikala Sri/
+                Viswa Ravi Chandra</td>
+            <td>9951989899</td>
+        </tr>
+        <tr>
+            <td>C-702</td>
+            <td>MEGHRAJ/ANJANEE NAGPAL</td>
+            <td>9550005050</td>
+        </tr>
+        <tr>
+            <td>C-703</td>
+            <td>V GANGADHAR/
+                VIJYAYLAKSHMI</td>
+            <td>9849466624</td>
+        </tr>
+        <tr>
+            <td>C-704</td>
+            <td>Dr.T V M Murthy</td>
+            <td>9652222564</td>
+        </tr>
+        <tr>
+            <td>C-705</td>
+            <td>S VENKATESWARAO</td>
+            <td>9989632299</td>
+        </tr>
+        <tr>
+            <td>C-706</td>
+            <td>SATYA VEERA KUMAR</td>
+            <td>9676465353</td>
+        </tr>
+        <tr>
+            <td>C-801</td>
+            <td>B. Hari Prasad - Second Sale</td>
+            <td>9492988055</td>
+        </tr>
+        <tr>
+            <td>C-802</td>
+            <td>P Ramakrishna</td>
+            <td>99632 92444</td>
+        </tr>
+        <tr>
+            <td>C-803</td>
+            <td>K MADHU SUDAN RAO</td>
+            <td>7702446888</td>
+        </tr>
+        <tr>
+            <td>C-804</td>
+            <td>M.Haroon Basha</td>
+            <td>Brother-in-law -9841727913/
+                Haroon -9629960086</td>
+        </tr>
+        <tr>
+            <td>C-805</td>
+            <td>U VENKAT RAO</td>
+            <td>73810 97585</td>
+        </tr>
+        <tr>
+            <td>C-806</td>
+            <td>Y KRISHNA MOHAN</td>
+            <td>9163345002</td>
+        </tr>
+        <tr>
+            <td>C-901</td>
+            <td>S G Rama Rao</td>
+            <td>9949093870</td>
+        </tr>
+        <tr>
+            <td>C-902</td>
+            <td>M SAILAJA</td>
+            <td>9816058359</td>
+        </tr>
+        <tr>
+            <td>C-903</td>
+            <td>PV Siva Prasad/
+                Rupa</td>
+            <td>7893446688</td>
+        </tr>
+        <tr>
+            <td>C-904</td>
+            <td>B. Asma Parvin/
+                Mohd. Zubair</td>
+            <td>9840510095</td>
+        </tr>
+        <tr>
+            <td>C-905</td>
+            <td>A. Vidya Sagar Reddy/
+                Umadevi</td>
+            <td>0096566246741</td>
+        </tr>
+        <tr>
+            <td>C-906</td>
+            <td>SURESH/
+                SRIDEVI KAVALI</td>
+            <td>9603240035</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

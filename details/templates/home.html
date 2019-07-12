@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="#da532c" name="theme-color">
+    <title>Home | Fortune towers</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/home.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/common.min.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://use.fontawesome.com/c2f7320238.js" type="text/javascript"></script>
+    <link href="{% static 'css/home.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-static-top navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand navbar-hide" href="{% url 'details:profile' %}"><i class="fa fa-user fa-lg"></i></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'details:home' %}">Home</a></li>
+            <li><a href="{% url 'details:contacts' %}">Contacts</a></li>
+            <li><a href="{% url 'details:events' %}">Events</a></li>
+            <li><a href="{% url 'details:gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'details:association' %}">Association</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right navbar-show">
+            <li><a class="navbar-brand" href="{% url 'details:profile' %}"><i class="fa fa-user fa-lg"></i></a></li>
+        </ul>
+
+    </div>
+    </div>
+</nav>
+<div class="carousel slide" data-ride="carousel" id="myCarousel">
+    <ol class="carousel-indicators">
+        <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+        <li data-slide-to="1" data-target="#myCarousel"></li>
+        <li data-slide-to="2" data-target="#myCarousel"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img alt="abc" class="rounded" src="{% static 'images/final1.jpg' %}" style="width:100%;height:450px;">
+        </div>
+
+        <div class="item">
+            <img alt="def" class="rounded" src="{% static 'images/final2.jpg' %}" style="width:100%;height:450px;">
+        </div>
+
+        <div class="item">
+            <img alt="ghi" class="rounded" src="{% static 'images/final3.jpg' %}" style="width:100%;height:450px;">
+        </div>
+    </div>
+    <a class="left carousel-control" data-slide="prev" href="#myCarousel">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" data-slide="next" href="#myCarousel">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="container figure">
+    <div class="tab-content description">
+        <div class="tab-pane fade in active" id="cepstrum">
+            <h2>About</h2>
+            <p> Aditya Fortune Towers is a 162 residential flat gated community which is located in Midhilapuri Vuda Colony,
+                Madhurawada, Visakhapatnam. The complex consists of 3 residential apartment blocks each consisting of
+                54 three bed room spacious flats. The apartment complex includes a 6000sft club house, Swimming pool,
+                two lifts per block, elegant landscaping and several other facilities. The developer for this project is
+                Aditya Housing and Infrastructure Development Corporation (AHIDCO).</p>
+
+        </div>
+    </div>
+</div>
+<br><br><br><br>
+
+<br><br><br><br>
+
+<div class="credits">
+      <div class="col-md-3">
+        <em><strong>Coded by: </strong> Karthik Tata</em>
+      </div>
+      <div class="col-md-3">
+        <em><strong>Design by:</strong> Kaushik Ganguneni</em>
+      </div>
+</div>
+
+</body>
+</html>

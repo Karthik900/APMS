@@ -1,0 +1,176 @@
+{% load staticfiles %}
+
+.figure {
+    -webkit-box-shadow: 0 0 10px lightblue;
+    box-shadow: 0 0 10px lightblue
+}
+
+.event1 {
+    background: url();
+    background-size: cover
+}
+
+.event2 {
+    background: url('{% static 'images/event2.jpg' %}');
+    background-size: cover
+}
+
+.event3 {
+    background: url('{% static 'images/event3.jpg' %}');
+    background-size: cover
+}
+
+.content {
+    background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+    background: linear-gradient(black, black);
+    padding: 15px;
+    color: #fff
+}
+
+.panel-body {
+    padding: 0
+}
+
+.nav-tabs>li {
+    float: none;
+    display: inline-block;
+    zoom: 1
+}
+
+.nav-tabs {
+    text-align: center
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #ddd
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border-width: 0
+}
+
+.nav-tabs>li>a {
+    border: none;
+    color: gray
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li>a:hover {
+    border: none;
+    color: #000 !important;
+    background: 0 0
+}
+
+.nav-tabs>li>a::after {
+    content: "";
+    background: #000;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    -webkit-transition: all 250ms ease 0s;
+    transition: all 250ms ease 0s;
+    -webkit-transform: scale(0);
+    transform: scale(0)
+}
+
+.nav-tabs>li.active>a::after,
+.nav-tabs>li:hover>a::after {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+.tab-content {
+    padding: 20px
+}
+
+.button1 {
+    background: #000;
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 20px
+}
+
+.button1:hover {
+    background-color: #555
+}
+
+.even>.col-md-3,
+.odd>.col-md-3 {
+    margin-bottom: 40px;
+    text-align: center
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center
+}
+
+.even,
+.odd {
+    display: none
+}
+
+.blah {
+    margin-bottom: 40px
+}
+
+.tab-content p {
+    text-align: justify
+}
+
+.tab-content p>span {
+    text-decoration: line-through
+}
+
+
+
+.carousel {
+    margin-bottom: 50px
+}
+
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right,
+.carousel-fade .carousel-inner .item {
+    opacity: 0
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right,
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
+
+.carousel-fade .carousel-control {
+    z-index: 2
+}
+
+@media (min-width:768px) {
+    .description p {
+        font-size: 1.25em
+    }
+}
+
+.boo {
+    margin-top: 50px
+}

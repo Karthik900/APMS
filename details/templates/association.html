@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#da532c">
+    <title>Association | Fortune towers</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/team.min.css' %}">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://use.fontawesome.com/c2f7320238.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".menu" data-offset="50">
+<nav class="navbar navbar-inverse navbar-static-top" id="top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-hide" href="{% url 'details:profile' %}"><i class="fa fa-user fa-lg"></i></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'details:home' %}">Home</a></li>
+                <li><a href="{% url 'details:contacts' %}">Contacts</a></li>
+                <li><a href="{% url 'details:events' %}">Events</a></li>
+                <li><a href="{% url 'details:gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'details:association' %}">Association</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right navbar-show">
+                <li><a class="navbar-brand" href="{% url 'details:profile' %}"><i class="fa fa-user fa-lg"></i></a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<header>
+    <div class="container-fluid">
+        <h1>About Association!</h1>
+        <p class="intro">The Aditya Fortune Towers Flat Owners Welfare Association was formed in July 2018 as a non
+            profit organisation with the aim to facilitate the takeover of the Aditya Fortune Towers residential
+            apartment complex from the developer M/s. Aditya’s Housing & Infrastructure Development Corporation Pvt. Ltd
+            (AHIDCO) and maintain the complex facilities in a safe and secure manner by collecting the required
+            maintenance charges from all the flat owners. The Association shall conduct its activities based on the
+            rules and guidelines set in the bye-laws approved by the general body.
+        </p>
+        <br>
+    </div>
+</header>
+
+
+<div class="container">
+    <div class="allfigures">
+
+        <a href="#top"><i class="fa fa-arrow-circle-o-up fa-4x"></i></a>
+
+        <div class="row row2">
+
+            <h4></h4>
+        </div>
+
+
+        <div class="row row2">
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/Sumanth ReddyM.png' %}" alt="Sumanth">
+                    <div class="container1">
+                        <h3>Mr. M Sumanth Reddy</h3>
+                        <p class="title">President</p>
+                        <p>Flat No. 406, A-Block <br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/Yugandhar.png' %}" alt="Yugandhar">
+                    <div class="container1">
+                        <h3>Mr. P. Yugandhar</h3>
+                        <p class="title">Vice President</p>
+                        <p>Flat No. 202, C-Block<br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/Ramakrishna P.png' %}" alt="Ramakrishna">
+                    <div class="container1">
+                        <h3>Mr. P. Ramakrishna</h3>
+                        <p class="title">Vice President</p>
+                        <p>Flat No. 802, C-Block<br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/sateesh A.png' %}" alt="Sateesh">
+                    <div class="container1">
+                        <h3>Mr. A. Sathish Kumar </h3>
+                        <p class="title">General Secretary</p>
+                        <p>Flat No. 303, B-Block <br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row row2">
+
+            <h4></h4>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="figure">
+                <img src="{% static 'images/Balak.png' %}" alt="Balak">
+                <div class="container1">
+                    <h3>Mr. G. Balakrishna </h3>
+                    <p class="title">Joint Secretary A-Block</p>
+                    <p> Flat No. 701, A-Block <br/> +91-9848478127</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-3 col-md-3">
+            <div class="figure">
+                <img src="{% static 'images/Raju.png' %}" alt="Raju">
+                <div class="container1">
+                    <h3>Mr. G. Lakshmipathi Raju </h3>
+                    <p class="title">Joint Secretary B-Block</p>
+                    <p>Flat No. 401, B-Block <br/> ------</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row row2">
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/Rupa.png' %}" alt="Rupa">
+                    <div class="container1">
+                        <h3>Ms. Rupa Sivaprasad </h3>
+                        <p class="title">Joint Secretary C-Block</p>
+                        <p>Flat No. 903, C-Block <br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/Niranjan Patro.png' %}" alt="Patro">
+                    <div class="container1">
+                        <h3>Niranjan Patro </h3>
+                        <p class="title">Treasurer</p>
+                        <p> -------- <br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="row row2">
+            <div id="third" class="break"></div>
+            <h4></h4>
+        </div>
+
+        <div class="row row2">
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/' %}" alt="Nagpal">
+                    <div class="container1">
+                        <h3>Mr. Meghraj Nagpal</h3>
+                        <p class="title">Member</p>
+                        <p>Flat No. 702, C-Block <br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/Pulla Reddy.png' %}" alt="Pulla">
+                    <div class="container1">
+                        <h3>Capt. Pulla Reddy </h3>
+                        <p class="title">Advisor</p>
+                        <p> Flat No. 705, A-Block <br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/Gopal Ch.png' %}" alt="Gopal">
+                    <div class="container1">
+                        <h3>Mr. Ch. Gopal </h3>
+                        <p class="title">Advisor</p>
+                        <p>Flat No. 504, A-block <br/> ------</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="{% static 'images/KRG Rao.png' %}" alt="KRG">
+                    <div class="container1">
+                        <h3>Mr. KRG Krishna Rao </h3>
+                        <p class="title">Advisor</p>
+                        <p>Flat No. 501, A-Block <br/>------</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row2">
+
+            <h4></h4>
+        </div>
+
+        <div class="row row2">
+
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="figure">
+                    <img src="team/abhinav.jpg" alt="abhinav">
+                    <div class="container1">
+                        <h3>Abhinav Singh</h3>
+                        <p class="title">Branch Representative, ECE</p>
+                        <p>abhin170102002@iitg.ac.in <br/> +91-7906746990</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

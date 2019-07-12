@@ -1,0 +1,133 @@
+{% load staticfiles %}
+
+body {
+    font-family: Lato, Arial, sans-serif
+}
+
+.navbar {
+    background: #000;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28)
+}
+
+.navbar-inverse {
+    border: none !important
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none
+}
+
+.navbar > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav-title > a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .navbar-collapse {
+    text-align: center
+}
+
+.navbar-hide {
+    visibility: visible
+}
+
+.navbar-show {
+    visibility: hidden
+}
+
+.card .col-md-8>h3 {
+    text-align: left
+}
+
+@media (min-width:768px) {
+
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.active>a:focus,
+    .navbar-inverse .navbar-nav>.active>a:hover {
+        border-bottom: 3px solid #fff
+    }
+
+    ul.navbar-nav {
+        margin-left: -200px
+    }
+
+    .navbar-hide {
+        visibility: hidden
+    }
+
+    .navbar-show {
+        visibility: visible
+    }
+
+    .col-md-2 i {
+        padding: 0 7px
+    }
+
+    .card .col-md-8>h3 {
+        text-align: center
+    }
+}
+
+.navbar .navbar-collapse {
+    line-height: 0
+}
+
+
+.card {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3)
+}
+
+
+
+.card a {
+    text-decoration: none;
+    color: #fff
+}
+
+.card a:focus,
+.card a:hover {
+    color: gray;
+    text-decoration: none;
+    outline: 0;
+}
+
+.credits {
+    padding: 10px;
+
+}
+
+
+
+.blank {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1)
+}
+
+@-webkit-keyframes move {
+    0% {
+        background-position: 0 center
+    }
+
+    100% {
+        background-position: 12.9vh center
+    }
+}
+
+@keyframes move {
+    0% {
+        background-position: 0 center
+    }
+
+    100% {
+        background-position: 12.9vh center
+    }
+}
